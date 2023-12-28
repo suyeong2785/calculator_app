@@ -6,6 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/equationTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end"
+        android:text="equation"
+        android:textSize="30sp"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="result"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@id/keyPadFlow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/keyPadFlow"
         android:layout_width="0dp"
@@ -33,23 +59,27 @@
         style="@style/numberKeyPad"
         android:text="1"
         tools:ignore="MissingConstraints"
+        android:onClick="numberClicked"
         />
 
     <Button
         android:id="@+id/button2"
         style="@style/numberKeyPad"
         android:text="2"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
         style="@style/numberKeyPad"
         android:text="3"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints" />
     <Button
         android:id="@+id/button4"
         style="@style/numberKeyPad"
         android:text="4"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints"
         />
 
@@ -57,17 +87,20 @@
         android:id="@+id/button5"
         style="@style/numberKeyPad"
         android:text="5"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button6"
         style="@style/numberKeyPad"
         android:text="6"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints" />
     <Button
         android:id="@+id/button7"
         style="@style/numberKeyPad"
         android:text="7"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints"
         />
 
@@ -75,18 +108,21 @@
         android:id="@+id/button8"
         style="@style/numberKeyPad"
         android:text="8"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button9"
         style="@style/numberKeyPad"
         android:text="9"
+        android:onClick="numberClicked"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button0"
         style="@style/numberKeyPad"
         android:text="0"
+        android:onClick="numberClicked"
         app:layout_constraintHorizontal_weight="1"
         tools:ignore="MissingConstraints" />
 
@@ -94,6 +130,7 @@
         android:id="@+id/buttonEqual"
         style="@style/operatorKeypad"
         android:text="="
+        android:onClick="equalClicked"
         tools:ignore="MissingConstraints"
         app:layout_constraintHorizontal_weight="3"/>
 
@@ -101,18 +138,21 @@
         android:id="@+id/buttonClear"
         style="@style/operatorKeypad"
         android:text="C"
+        android:onClick="clearClicked"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonPlus"
         style="@style/operatorKeypad"
         android:text="+"
+        android:onClick="operatorClicked"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonMinus"
         style="@style/operatorKeypad"
         android:text="-"
+        android:onClick="operatorClicked"
         tools:ignore="MissingConstraints" />
 
 
